@@ -1,0 +1,90 @@
+/* ===== FORM LOGIN & REGISTER DÙNG CHUNG ===== */
+.login-page .form-login,
+.register-page .form-register {
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 35px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: "Open Sans", Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.login-page .form-login:hover,
+.register-page .form-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== HEADING ===== */
+.login-page h1,
+.register-page h1 {
+    text-align: center;
+    color: #00845c;
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* ===== INPUT ===== */
+.login-page form input[type="text"],
+.login-page form input[type="email"],
+.login-page form input[type="password"],
+.register-page form input[type="text"],
+.register-page form input[type="email"],
+.register-page form input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.login-page form input:focus,
+.register-page form input:focus {
+    border-color: linear-gradient(135deg, #7cc652, #00845c);
+    box-shadow: 0 0 0 3px rgba(108, 192, 112, 0.2);
+}
+
+/* ===== BUTTON ===== */
+.login-page form button[type="submit"],
+.register-page form button[type="submit"] {
+    background: linear-gradient(135deg, #7cc652, #00845c);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-page form button[type="submit"]:hover,
+.register-page form button[type="submit"]:hover {
+    background-color: #00845c;
+    transform: translateY(-1px);
+}
+
+/* ===== LINK / FOOTER ===== */
+.reset-pass {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.reset-pass a {
+    color: #00845c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.reset-pass a:hover {
+    text-decoration: underline;
+    color: #005f43;
+}

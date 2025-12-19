@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Gidole&family=Noto+Sans+Warang+Citi&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+nav {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px 20px;
+}
+
+.banner{
+    width: 100%;
+    height: 487px;
+    text-align: center;
+    background-color: #7cc652;
+}
+
+.banner img{
+    object-fit: fill;
+    width: 1170px;
+    height: 487px;
+}
+
+.banner-page {
+    position: relative;
+}
+
+.banner-page img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.route-page {
+    position: absolute;
+    top: 50px;
+    right: 684px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.name-product {
+    text-align: center;
+
+}
+
+.name-page {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.name-page p{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    padding: 0px 10px;
+}
+
+.name-page p:hover{
+    color: #7cc652;
+    cursor: pointer;
+}
+
+.detail {
+    width: 80%;
+    height: auto;
+    display: flex;
+    gap: 0px;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    margin: auto;
+}
+
+.detail-img img{
+    width: 85%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.detail-info {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.detail-info p{
+    padding: 8px 0px;
+}
+
+.chosse button{
+    width: 100px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    background: linear-gradient(120deg, #4fc794 0%, #96e6a1 100%);
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.chosse button:hover{
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.paymment-btn button:hover{
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.banner-slogan {
+    text-align: center;
+}
+
+.banner-slogan img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.btn-pay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 10px 0;
+}
+
+.paymment-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.paymment-btn button {
+    width: 200px;
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    background: linear-gradient(120deg, #4fc794 0%, #96e6a1 100%);
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    line-height: 1.5;
+}
+
+.paymment-btn button:hover {
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    transform: translateY(-2px);
+}
+
+.detal-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.detal-quantity p {
+    font-size: small;
+    font-weight: 600;
+    color: #333;
+}
+
+.detal-quantity button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    background: linear-gradient(120deg, #4fc794 0%, #96e6a1 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.detal-quantity button:hover {
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.detal-quantity input {
+    width: 100px;
+    padding: 5px 0;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.detal-quantity input:focus {
+    outline: none;
+    border-color: #7cc652;
+    box-shadow: 0 0 8px rgba(124, 198, 82, 0.3);
+}
+
+.info-buy-product {
+    margin-top: 10px;
+}
+
+.info-buy-product p {
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+.info-buy-product a {
+    color: #7cc652;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-buy-product a:hover {
+    color: #6ab447;
+    text-decoration: underline;
+}
+
+.btn-pay form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}

@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Gidole&family=Noto+Sans+Warang+Citi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.task-header {
+   width: 100%;
+   height: auto;
+   background-color: #e7e7e7;
+   font-family: "Open Sans", sans-serif;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand {
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.brand img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
+.view-website a{
+    text-decoration: none;
+    color: black;
+}
+
+.user {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #7cc652;
+    height: 100vh;
+    padding: 10px 0;
+    border-right: 1px solid #ccc;
+  }
+
+  .search-box {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .search-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+  }
+
+  .search-box button {
+    padding: 8px 12px;
+    background-color: #7cc652;
+    border: none;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .menu li:first-child {
+    border-top: none;
+  }
+
+  .menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s;
+  }
+
+  .menu li a:hover {
+    background-color: #68b13e;
+  }
+
+  .menu li a i {
+    margin-right: 10px;
+  }
+
+.admininstrative{
+    padding: 20px;
+}
+
+.title h1{
+    font-size: 35px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.line hr{
+    width: 1200px;
+    color: #ccc;
+}
+
+.dashboard {
+    padding-top: 20px ;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card-footer {
+    background-color: #fff;
+    color: inherit;
+    text-align: left;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+
+  .card-footer a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card-footer i {
+    margin-left: 5px;
+  }
+
+  .icon {
+    font-size: 40px;
+    margin-right: 15px;
+  }
+
+  .text h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .text p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .blue {
+    background-color: #337ab7;
+  }
+
+  .green {
+    background-color: #5cb85c;
+  }
+
+  .orange {
+    background-color: #f0ad4e;
+  }
+
+  .red {
+    background-color: #d9534f;
+  }
+
+.form-show{
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+.title-form{
+  background-color: #7cc652;
+}
+
+.title-form p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+}
+
+.showList {
+  border: 1px solid #ccc;
+  font-family: "Open Sans", sans-serif;
+  /* font-size: small; */
+}
+
+.image-product img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.showList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.showList thead {
+  background-color: #f8f9fa;
+}
+
+.showList th,
+.showList td {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+  color: #68b13e;
+}.showList th,
+.showList td {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+}
+
+.admin-product-price p {
+  color: #7cc652;
+  font-weight: bold;
+}
+
+.edit-product a {
+  margin: 0 8px;
+  color: #7cc652;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.edit-product a:hover {
+  color: #28a745;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 8px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .btn-page .pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .btn-page .page-item {
+    display: inline-block;
+  }
+
+  .btn-page .page-link {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-page .page-link:hover {
+    background-color: #e2e6ea;
+    color: #000;
+  }
+
+  .btn-page .page-item.active .page-link {
+    background-color: #7cc652;
+    color: white;
+    border-color: #7cc652;
+  }
+
+  .btn-page .page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+    background-color: #f1f1f1;
+  }
+
+  /*  */
+  .form-product {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .form-title {
+    font-size: 24px;
+    color: #7cc652;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="file"],
+  .form-group select {
+    width: 90%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #7cc652;
+  }
+
+  .form-group.two-cols {
+    display: flex;
+    gap: 20px;
+  }
+
+  .form-group.two-cols > div {
+    flex: 1;
+  }
+
+  .submit-btn {
+    background-color: #7cc652;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #68b13e;
+  }
+
+/*  */
+#updateProductForm {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#updateProductForm h2 {
+    text-align: center;
+    color: #6cc070;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#updateProductForm .form-group {
+    margin-bottom: 15px;
+}
+
+#updateProductForm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#updateProductForm input[type="text"],
+#updateProductForm input[type="number"],
+#updateProductForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#updateProductForm input[type="text"]:focus,
+#updateProductForm input[type="number"]:focus,
+#updateProductForm select:focus {
+    border-color: #6cc070;
+    outline: none;
+}
+
+#updateProductForm button[type="submit"] {
+    background-color: #6cc070;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#updateProductForm button[type="submit"]:hover {
+    background-color: #5bb05d;
+}
+
+#updateProductForm button[type="button"] {
+    margin-top: 10px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#updateProductForm button[type="button"]:hover {
+    background-color: #ccc;
+}
+
+#updateUserForm {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#updateUserForm .form-group {
+    margin-bottom: 15px;
+}
+
+#updateUserForm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#updateUserForm input[type="text"],
+#updateUserForm input[type="email"],
+#updateUserForm input[type="password"],
+#updateUserForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#updateUserForm input:focus,
+#updateUserForm select:focus {
+    border-color: #6cc070;
+    outline: none;
+}
+
+#updateUserForm button[type="submit"] {
+    background-color: #6cc070;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#updateUserForm button[type="submit"]:hover {
+    background-color: #5bb05d;
+}
+
+#updateUserForm button[type="button"] {
+    margin-top: 10px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#updateUserForm button[type="button"]:hover {
+    background-color: #ccc;
+}
