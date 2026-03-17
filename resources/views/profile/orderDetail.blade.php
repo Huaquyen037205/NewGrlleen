@@ -3,7 +3,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <main class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-12 gap-8">
 
-        <!-- SIDEBAR -->
         <aside class="col-span-3">
             <div class="bg-white border rounded-xl shadow-sm p-6">
                 <h2 class="text-xl font-semibold text-green-600 mb-4">Tài khoản của tôi</h2>

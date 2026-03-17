@@ -1,7 +1,6 @@
 @extends('template.user')
 @section('content')
     <style>
-        /* Reset & base */
         * {
             margin: 0;
             padding: 0;
@@ -18,11 +17,10 @@
             min-height: 80vh;
         }
 
-        /* Container */
         .login-container {
             background: #fff;
             padding: 40px 35px;
-            margin-top: 50px;
+            margin: 80px;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             width: 100%;
@@ -35,7 +33,6 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* Heading */
         h2 {
             text-align: center;
             font-weight: 700;
@@ -44,7 +41,6 @@
             letter-spacing: 0.3px;
         }
 
-        /* Input group */
         .form-group {
             margin-bottom: 18px;
         }
@@ -74,7 +70,6 @@
             box-shadow: 0 0 0 3px rgba(124, 198, 82, 0.2);
         }
 
-        /* Button */
         button {
             width: 100%;
             background: linear-gradient(135deg, #7cc652, #00845c);
@@ -93,7 +88,6 @@
             transform: translateY(-1px);
         }
 
-        /* Message box */
         .alert-error,
         .alert-success {
             padding: 10px 14px;
@@ -112,7 +106,6 @@
             color: #166534;
         }
 
-        /* Footer links */
         .footer {
             margin-top: 18px;
             text-align: center;
