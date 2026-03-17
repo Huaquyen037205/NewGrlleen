@@ -40,14 +40,11 @@
                 </nav>
             </div>
         </aside>
-
-        <!-- MAIN CONTENT -->
         <section class="col-span-9">
             <div class="bg-white border rounded-xl shadow-sm p-8">
                 <h2 class="text-2xl font-bold text-green-600 mb-1">Chi tiết đơn hàng</h2>
                 <p class="text-sm text-gray-400 mb-6">Xem thông tin sản phẩm và tổng tiền đơn hàng của bạn</p>
 
-                <!-- Sản phẩm -->
                 <div class="space-y-4">
                     @foreach ($items as $item)
                         <div
@@ -64,7 +61,6 @@
                     @endforeach
                 </div>
 
-                <!-- Tổng tiền -->
                 @php
                     $subtotal = $items->sum(fn($i) => $i->price * $i->quantity);
                     $total = $subtotal + $shipping_fee;
@@ -77,7 +73,6 @@
                     <p class="text-green-600 font-bold text-lg">Tổng cộng: <span>{{ number_format($total) }}₫</span></p>
                 </div>
 
-                <!-- Back button -->
                 <div class="mt-6 flex justify-end">
                     <a href="{{ route('profile.order') }}"
                         class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-lg hover:shadow-md transition">

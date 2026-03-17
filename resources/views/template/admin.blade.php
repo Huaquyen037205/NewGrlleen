@@ -68,9 +68,7 @@
             <p class="text-xs text-gray-500 text-center mt-8">© 2025 ReadTest</p>
         </aside>
 
-        <!-- MAIN CONTENT -->
         <main class="ml-64 p-8 min-h-screen w-full">
-            <!-- Header -->
             <header class="flex justify-between items-center mb-8">
                 <input type="text" placeholder="Tìm kiếm..."
                     class="px-4 py-2 w-80 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#7cc652] outline-none">
@@ -82,8 +80,6 @@
                         JA</div>
                 </div>
             </header>
-
-            <!-- Stats -->
             @yield('admin')
         </main>
     </div>

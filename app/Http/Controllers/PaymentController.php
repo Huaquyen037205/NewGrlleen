@@ -193,7 +193,6 @@ class PaymentController extends Controller
 
     public function vnpayCallback(Request $request)
     {
-        // Xử lý kết quả trả về từ VnPay
         $vnp_ResponseCode = $request->input('vnp_ResponseCode');
         $orderInfo = session('order_info');
         $cart = $orderInfo['cart'] ?? [];

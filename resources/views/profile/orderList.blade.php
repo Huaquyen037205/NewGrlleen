@@ -4,7 +4,6 @@
 
     <main class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-12 gap-8">
 
-        <!-- SIDEBAR -->
         <aside class="col-span-3">
             <div class="bg-white border rounded-xl shadow-sm p-6">
                 <h2 class="text-xl font-semibold text-green-600 mb-4">Tài khoản của tôi</h2>
@@ -42,7 +41,6 @@
             </div>
         </aside>
 
-        <!-- MAIN CONTENT -->
         <section class="col-span-9">
             <div class="bg-white border rounded-xl shadow-sm p-8">
                 <h2 class="text-2xl font-bold text-green-600 mb-2">Đơn hàng của bạn</h2>

@@ -46,17 +46,6 @@ class ListController extends Controller
                     ->where('status', 'paid')
                     ->select(DB::raw('IFNULL(SUM(COALESCE(shipping_fee,0)),0) as ship'))
                     ->value('ship');
-
-                $monthlyRevenueRaw = DB::table('orders')
-                    ->where('status', 'paid')
-                    ->select(
-                        DB::raw('MONTH(created_at) as month'),
-                        DB::raw('IFNULL(SUM(total_amount - COALESCE(shipping_fee,0)),0) as revenue')
-                    )
-                    ->whereYear('created_at', date('Y'))
-                    ->groupBy('month')
-                    ->pluck('revenue', 'month')
-                    ->toArray();
             } else {
                 $defaultShip = config('shop.shipping_fee', 30000);
 
@@ -67,6 +56,17 @@ class ListController extends Controller
 
                 $shippingFeeTotal = $ordersCount * $defaultShip;
                 $revenue = $sumTotal - $shippingFeeTotal;
+
+                $monthlyRevenueRaw = DB::table('orders')
+                    ->where('status', 'paid')
+                    ->select(
+                        DB::raw('MONTH(created_at) as month'),
+                        DB::raw("SUM(total_amount - $defaultShip) as revenue")
+                    )
+                    ->whereYear('created_at', date('Y'))
+                    ->groupBy('month')
+                    ->pluck('revenue', 'month')
+                    ->toArray();
             }
 
             $ordersByMonthRaw = DB::table('orders')

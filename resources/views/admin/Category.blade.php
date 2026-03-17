@@ -2,14 +2,11 @@
 
 @section('admin')
     <div class="p-6 bg-gray-50 min-h-screen space-y-8">
-
-        <!-- HEADER -->
         <div class="border-b pb-4">
             <h1 class="text-2xl font-bold text-gray-800">Quản lý danh mục</h1>
             <p class="text-sm text-gray-500 mt-1">Theo dõi, chỉnh sửa và thêm danh mục sản phẩm</p>
         </div>
 
-        <!-- THỐNG KÊ -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div class="bg-white p-5 rounded-xl shadow-sm border flex items-center justify-between">
                 <div>
@@ -52,9 +49,7 @@
             </div>
         </div>
 
-        <!-- DANH SÁCH DANH MỤC -->
         <div class="bg-white p-6 rounded-xl shadow-sm border">
-            <!-- Header -->
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
                 <h2 class="text-lg font-semibold text-gray-800">Danh sách danh mục</h2>
                 <button type="button" onclick="openAddModal()"
@@ -63,7 +58,6 @@
                 </button>
             </div>
 
-            <!-- FILTER -->
             <div class="mb-6">
                 <form action="" method="GET" class="flex flex-wrap items-center gap-3">
                     <input type="text" name="q" placeholder="Tìm kiếm..." value="{{ $q ?? '' }}"
@@ -83,7 +77,6 @@
                 </form>
             </div>
 
-            <!-- TABLE -->
             <div class="overflow-x-auto rounded-lg border border-gray-100">
                 <table class="w-full text-sm text-left text-gray-700">
                     <thead class="bg-gray-100 text-gray-600 uppercase text-xs tracking-wider">
@@ -148,7 +141,6 @@
                 </table>
             </div>
 
-            <!-- PAGINATION -->
             <div class="mt-6 flex justify-center">
                 {{ $categories->links() }}
             </div>
