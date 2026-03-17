@@ -2,16 +2,12 @@
 
 @section('admin')
     <div class="p-6 bg-gray-50 min-h-screen space-y-8">
-
-        <!-- HEADER -->
         <div class="border-b pb-4">
             <h1 class="text-2xl font-bold text-gray-800">Quản lý đơn hàng</h1>
             <p class="text-sm text-gray-500 mt-1">Theo dõi, xử lý và quản lý các đơn hàng của hệ thống</p>
         </div>
 
-        <!-- THỐNG KÊ -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Tổng đơn hàng -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Tổng đơn hàng</p>
@@ -23,7 +19,6 @@
                 </div>
             </div>
 
-            <!-- Đơn hàng đã giao -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Đơn hàng đã giao</p>
@@ -35,7 +30,6 @@
                 </div>
             </div>
 
-            <!-- Đơn hàng đang xử lý -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Đơn hàng đang xử lý</p>
@@ -47,7 +41,6 @@
                 </div>
             </div>
 
-            <!-- Đơn hàng bị hủy -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Đơn hàng bị hủy</p>
@@ -60,7 +53,6 @@
             </div>
         </div>
 
-        <!-- DANH SÁCH ĐƠN HÀNG -->
         <div class="bg-white rounded-lg shadow-sm border">
             <div class="p-4 border-b flex flex-wrap gap-2 justify-between items-center">
                 <h2 class="text-lg font-semibold text-gray-800">Danh sách đơn hàng</h2>

@@ -2,7 +2,6 @@
 @section('admin')
     <div class="bg-gray-50 text-gray-800">
         <div class="p-6 space-y-6">
-            <!-- Header -->
             <div>
                 <h1 class="text-2xl font-bold mb-1">Quản lý người dùng</h1>
                 <p class="text-sm text-gray-500">Quản lý người dùng hệ thống, vai trò, quyền và kiểm soát truy cập</p>
@@ -12,7 +11,6 @@
                 </nav>
             </div>
 
-            <!-- Stats Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="bg-white rounded-xl shadow-sm p-5">
                     <div class="flex justify-between items-center">
@@ -91,7 +89,6 @@
                         <div id="addUserModal"
                             class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
                             <div class="bg-white rounded-xl w-96 shadow-lg p-6 relative">
-                                <!-- Nút đóng -->
                                 <button id="closeModalBtn"
                                     class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-xl">
                                     ×

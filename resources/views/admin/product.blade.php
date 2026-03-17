@@ -2,13 +2,11 @@
 @section('admin')
     <div class="bg-gray-50 text-gray-800">
         <div class="p-6 space-y-6">
-            <!-- Header -->
             <div>
                 <h1 class="text-2xl font-bold mb-1">Quản lý sản phẩm</h1>
                 <p class="text-sm text-gray-500">Quản lý thông tin sản phẩm, danh mục và trạng thái hiển thị</p>
             </div>
 
-            <!-- Stats -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center">
                     <div>
@@ -55,9 +53,7 @@
                 </div>
             </div>
 
-            <!-- Product List -->
             <div class="bg-white p-6 rounded-xl shadow-sm">
-                <!-- Header -->
                 <div class="flex justify-between items-center mb-5">
                     <h2 class="text-lg font-semibold">Danh sách sản phẩm</h2>
                     <div class="flex gap-2">
@@ -68,7 +64,6 @@
                     </div>
                 </div>
 
-                <!-- Filters -->
                 <div class="flex flex-wrap items-center gap-3 mb-6">
                     <form action="{{ route('admin.product.search') }}" method="GET">
                         <input id="productSearchInput" type="text" name="q" placeholder="Tìm kiếm..."
@@ -105,7 +100,6 @@
                     </form>
                 </div>
 
-                <!-- Table -->
                 <div class="overflow-hidden rounded-lg border border-gray-200">
                     <table class="w-full text-left text-sm">
                         <thead class="bg-gray-100 text-gray-600 uppercase text-xs tracking-wide">
@@ -225,7 +219,6 @@
             <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data"
                 class="space-y-4">
                 @csrf
-                <!-- Tên sản phẩm -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Tên sản phẩm</label>
                     <input type="text" name="name" required
@@ -238,7 +231,6 @@
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-400 focus:outline-none">
                 </div>
 
-                <!-- Danh mục -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Danh mục</label>
                     <select name="category_id" required
@@ -250,14 +242,12 @@
                     </select>
                 </div>
 
-                <!-- Mô tả -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Mô tả</label>
                     <textarea name="description" rows="3"
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-400 focus:outline-none"></textarea>
                 </div>
 
-                <!-- Trạng thái -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Tình trạng</label>
                     <select name="status"
@@ -276,14 +266,12 @@
                     </select>
                 </div>
 
-                <!-- Xuất xứ -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Xuất xứ</label>
                     <input type="text" name="origin"
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-400 focus:outline-none">
                 </div>
 
-                <!-- Nút hành động -->
                 <div class="flex justify-end gap-3 pt-3">
                     <button type="button" id="closeModalBtn"
                         class="px-4 py-2 text-sm border border-gray-300 rounded-lg hover:bg-gray-100">Hủy</button>
@@ -302,15 +290,12 @@
             <form id="editProductForm" method="POST" enctype="multipart/form-data" class="space-y-4">
                 @csrf
                 @method('PUT')
-
-                <!-- Ảnh -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Ảnh sản phẩm</label>
                     <input type="file" name="images[]" multiple
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 </div>
 
-                <!-- Tên sản phẩm -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Tên sản phẩm</label>
                     <input type="text" name="name" id="editName" required
@@ -318,7 +303,6 @@
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 </div>
 
-                <!-- Danh mục -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Danh mục</label>
                     <select name="category_id" id="editCategory" required
@@ -337,7 +321,6 @@
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 </div>
 
-                <!-- Trạng thái -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Tình trạng (Còn hàng / Hết hàng)</label>
                     <select name="status" id="editStatus"
@@ -353,7 +336,7 @@
                         value="{{ old('origin', $product->origin) }}"
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 </div>
-                <!-- Tình trạng -->
+
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Trạng thái (Đang bán / Ngừng bán)</label>
                     <select name="active" id="editActive"
@@ -423,7 +406,7 @@
                 const status = btn.dataset.status;
                 const active = btn.dataset.active;
                 const origin = btn.dataset.origin;
-                // Điền dữ liệu vào form
+
                 document.getElementById('editName').value = name;
                 document.getElementById('editCategory').value = category;
                 document.getElementById('editDescription').value = description;
@@ -433,7 +416,6 @@
 
                 editProductForm.action = `/admin/edit/product/${id}`;
 
-                // Hiện modal
                 editProductModal.classList.remove('hidden');
             });
         });

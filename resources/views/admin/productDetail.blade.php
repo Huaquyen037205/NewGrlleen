@@ -11,9 +11,7 @@
             </nav>
         </div>
 
-        <!-- THỐNG KÊ -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Tổng số biến thể -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Tổng biến thể</p>
@@ -24,7 +22,6 @@
                 </div>
             </div>
 
-            <!-- Biến thể bán chạy nhất -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Biến thể hot nhất</p>
@@ -37,7 +34,6 @@
                 </div>
             </div>
 
-            <!-- Tổng tồn kho -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Tổng tồn kho</p>
@@ -48,7 +44,6 @@
                 </div>
             </div>
 
-            <!-- Biến thể hết hàng -->
             <div class="bg-white p-4 rounded-lg shadow-sm flex justify-between items-center border">
                 <div>
                     <p class="text-sm text-gray-500">Hết hàng</p>
@@ -121,9 +116,8 @@
                 </div>
             </div>
         </form>
-        <!-- BẢNG & CHI TIẾT -->
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- BẢNG BIẾN THỂ -->
             <div class="bg-white rounded-xl shadow-md p-6 border">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-lg font-semibold text-gray-800">Danh sách biến thể</h2>
@@ -191,8 +185,6 @@
                 </div>
             </div>
 
-
-            <!-- CHI TIẾT SẢN PHẨM -->
             <div class="bg-white rounded-xl shadow-md p-6 border">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4">Chi tiết sản phẩm</h2>
 
@@ -237,7 +229,6 @@
             </div>
         </div>
 
-        <!-- QUAY LẠI -->
         <div class="mt-6 text-right">
             <a href="{{ route('admin.products.list') }}"
                 class="inline-block bg-green-500 hover:bg-green-600 text-white text-sm font-medium px-5 py-2 rounded-lg">

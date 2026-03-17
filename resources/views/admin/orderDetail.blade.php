@@ -2,17 +2,13 @@
 
 @section('admin')
     <div class="p-6 bg-gray-50 min-h-screen space-y-8">
-
-        <!-- HEADER -->
         <div>
             <h1 class="text-2xl font-bold text-gray-800">Chi tiết đơn hàng</h1>
             <p class="text-sm text-gray-500 mt-1">Xem thông tin khách hàng và các sản phẩm thuộc đơn hàng</p>
         </div>
 
-        <!-- ORDER SUMMARY -->
         <div class="bg-white p-6 rounded-xl shadow-sm border">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Customer Info -->
                 <div>
                     <h2 class="font-semibold text-lg text-gray-800 mb-4">Thông tin khách hàng</h2>
                     <div class="space-y-2 text-sm text-gray-600">
@@ -25,7 +21,6 @@
                     </div>
                 </div>
 
-                <!-- Order Info -->
                 <div>
                     <h2 class="font-semibold text-lg text-gray-800 mb-4">Thông tin đơn hàng</h2>
                     <div class="space-y-2 text-sm text-gray-600">
