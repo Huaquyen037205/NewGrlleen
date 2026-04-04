@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = document.querySelector(".prev");
     const nextBtn = document.querySelector(".next");
 
+
+    if (!slider || !prevBtn || !nextBtn || slides.length === 0) return;
+
     let index = 0;
 
     function showSlide(i) {
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = document.querySelector(".hotProduct-controls .prev");
     const nextBtn = document.querySelector(".hotProduct-controls .next");
 
-    if (!slider || products.length <= 4) return;
+    if (!slider || !prevBtn || !nextBtn || products.length <= 4) return;
 
     let currentIndex = 0;
     const visibleCount = 4;
@@ -85,12 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function increaseQuantity() {
     const quantityInput = document.getElementById('quantity');
-    quantityInput.value = parseInt(quantityInput.value) + 1;
+    if (quantityInput) {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
 }
 
 function decreaseQuantity() {
     const quantityInput = document.getElementById('quantity');
-    if (parseInt(quantityInput.value) > 1) {
+    if (quantityInput && parseInt(quantityInput.value) > 1) {
         quantityInput.value = parseInt(quantityInput.value) - 1;
     }
 }
