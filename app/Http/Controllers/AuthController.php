@@ -5,6 +5,10 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -16,6 +20,21 @@ class AuthController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'phone' => 'required|string|max:15',
             'password' => 'required|string|min:6|confirmed',
+        ],  [
+                'name.required' => 'Tên không được để trống',
+                'name.string' => 'Tên phải là chuỗi',
+                'name.max' => 'Tên tối đa 255 ký tự',
+
+                'email.required' => 'Email không được để trống',
+                'email.email' => 'Email không đúng định dạng',
+                'email.unique' => 'Email đã tồn tại',
+
+                'phone.required' => 'Số điện thoại không được để trống',
+                'phone.max' => 'Số điện thoại tối đa 15 ký tự',
+
+                'password.required' => 'Mật khẩu không được để trống',
+                'password.min' => 'Mật khẩu phải tối thiểu 6 ký tự',
+                'password.confirmed' => 'Mật khẩu xác nhận không khớp',
         ]);
 
         User::create([
@@ -43,12 +62,12 @@ class AuthController extends Controller
                 ]);
             }
 
-        return redirect()->route('home')->with('success', 'Đăng nhập thành công');
-    }
+            return redirect()->route('home')->with('success', 'Đăng nhập thành công');
+        }
 
-    return back()->withErrors([
-        'email' => 'Email hoặc mật khẩu không đúng',
-    ]);
+        return back()->withErrors([
+            'email' => 'Email hoặc mật khẩu không đúng',
+        ]);
     }
 
     public function logout()
@@ -63,13 +82,45 @@ class AuthController extends Controller
         return view('auth.forgot-password');
     }
 
-
     public function sendResetLink(Request $request)
     {
-        $request->validate(['email' => 'required|email|exists:users,email']);
+        $request->validate(['email' => 'required|email']);
 
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
 
+        return $status === Password::RESET_LINK_SENT
+                    ? back()->with(['status' => __($status)])
+                    : back()->withErrors(['email' => __($status)]);
+    }
 
-        return back()->with('success', 'Liên kết đặt lại mật khẩu đã được gửi đến email của bạn.');
+    public function showResetForm(Request $request, $token = null)
+    {
+        return view('auth.reset-password', ['token' => $token, 'email' => $request->email]);
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $request->validate([
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->save();
+
+                event(new PasswordReset($user));
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+                    ? redirect()->route('login')->with('success', __($status))
+                    : back()->withErrors(['email' => [__($status)]]);
     }
 }

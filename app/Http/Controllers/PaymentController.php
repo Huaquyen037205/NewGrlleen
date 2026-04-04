@@ -138,8 +138,6 @@ class PaymentController extends Controller
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = route('payment.vnpay.callback');
 
-
-        // Thông tin đơn hàng
         $vnp_TxnRef = time();
         $vnp_OrderInfo = "Thanh toán đơn hàng";
         $vnp_OrderType = "billpayment";
